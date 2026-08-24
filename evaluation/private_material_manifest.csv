@@ -1,0 +1,35 @@
+category,anonymous_id,internal_filename,role,duration_s,sample_rate,channels,size_bytes,sha256,published,notes
+private_audio,target_reference_01,,XTTS zero-shot target reference,22.805,24000,1,,f72fe12d9fac6931cc6e53a274eba9d68751598b1a29fc10f0ddee73e24f4f42,no,original recording intentionally excluded
+private_audio,src_S1_1,S1_executive_take01.wav,"STS human source; scenario S1, take 1",12.5,,,,ba9b580059a3acd682fb00e0681547a4f48c3583f479c276b475700736899f34,no,
+private_audio,src_S1_2,S1_executive_take02.wav,"STS human source; scenario S1, take 2",8.0,,,,2d81b025fbc2052af0983b10ba50748766e2e9467a383c2164c7463eabbe011b,no,
+private_audio,src_S1_3,S1_executive_take03.wav,"STS human source; scenario S1, take 3",8.5,,,,fd8dc58359617a9f50606af3081277abde4a673b53b1f184bc2a8d340a0cad87,no,
+private_audio,src_S2_1,S2_customer_take01.wav,"STS human source; scenario S2, take 1",9.0,,,,9b38774994ffbc96b9be34c7f6c8a4429c65a2e5104870a32d9a8e3a7c388df5,no,
+private_audio,src_S2_2,S2_customer_take02.wav,"STS human source; scenario S2, take 2",9.5,,,,e054c2dd18bdaed8566a58b30bb98d289b0e2146b99d925c5d5fc08b0b10ca43,no,
+private_audio,src_S2_3,S2_customer_take03.wav,"STS human source; scenario S2, take 3",8.5,,,,b252b1d7f843fb63023ca27b540db07274f27c99c22ab59a0d06a013a7fdd9cd,no,
+private_audio,target_ref_01,target_ref_01.wav,genuine target-speaker reference used to compute the CAMPPlus target centroid,10.336,,,,23db66a9070c8e67ab746d21a00a2df182614bb50ed8457d2fdcaf138ea0ed15,no,included in the final STS CAMPPlus target centroid
+private_audio,target_ref_02,target_ref_02.wav,genuine target-speaker reference used to compute the CAMPPlus target centroid,12.608,,,,f40177ab1bbf54d3d7e13ef7306af6d7a80ed8cee8862741bd92cb1e9a590791,no,included in the final STS CAMPPlus target centroid
+private_audio,target_ref_03,target_ref_03.wav,genuine target-speaker reference used to compute the CAMPPlus target centroid,10.304,,,,112488d3211678f86b93f870f82f9e52dd4698bd1bb22c5647a515090a0f4cce,no,included in the final STS CAMPPlus target centroid
+private_audio,target_ref_04,target_ref_04.wav,genuine target-speaker reference used to compute the CAMPPlus target centroid,11.104,,,,7e90e5ae0b9d805f7a09d659120b39c484e7188299bb8f792b297021d7abc5b2,no,included in the final STS CAMPPlus target centroid
+private_audio,target_ref_05,target_ref_05.wav,genuine target-speaker reference used to compute the CAMPPlus target centroid,10.432,,,,00fa2b18a347604ba04f8d02f7dc4f6922de28a72b16d7c09ae6b4ea0bb47e66,no,included in the final STS CAMPPlus target centroid
+private_audio,target_holdout_01,target_holdout_01.wav,genuine target-speaker reference used to compute the CAMPPlus target centroid,13.92,,,,28fc4f4704e413c809ef3b1eaec45385790c8ee61fa688460583b2b5accd7934,no,included in the final STS CAMPPlus target centroid
+private_audio,target_holdout_02,target_holdout_02.wav,genuine target-speaker reference used to compute the CAMPPlus target centroid,14.304,,,,cf2242466661b69a061d0984c0531dc0aabe28306abc58f31938036b48a812a9,no,included in the final STS CAMPPlus target centroid
+private_audio,target_holdout_03,target_holdout_03.wav,genuine target-speaker reference used to compute the CAMPPlus target centroid,15.232,,,,bb4b62c58cff708db1bf58190d2913d653db7cca902ae992cda39dd7549333eb,no,included in the final STS CAMPPlus target centroid
+private_audio,training_slice_01,training_slice_01.wav,genuine target-speaker reference used to compute the CAMPPlus target centroid,9.856,,,,5e71c8026a1f6ee22b542e8eb38a0e88caf09e07c47ba5c8824a4857d5e26007,no,included in the final STS CAMPPlus target centroid
+private_audio,training_slice_02,training_slice_02.wav,genuine target-speaker reference used to compute the CAMPPlus target centroid,11.52,,,,d3190901302283fa3c9926849942dadc09af39e7ca191ceac791fb33a8c705ab,no,included in the final STS CAMPPlus target centroid
+private_audio,xtts_campplus_ref_01,audio1_chunk_046.wav,XTTS CAMPPlus target reference,,,,,not_recorded,no,hash not present in the supplied publication package
+private_audio,xtts_campplus_ref_02,audio3_chunk_074.wav,XTTS CAMPPlus target reference,,,,,not_recorded,no,hash not present in the supplied publication package
+private_audio,xtts_campplus_ref_03,audio3_chunk_026.wav,XTTS CAMPPlus target reference,,,,,not_recorded,no,hash not present in the supplied publication package
+private_audio,xtts_campplus_ref_04,audio1_chunk_079.wav,XTTS CAMPPlus target reference,,,,,not_recorded,no,hash not present in the supplied publication package
+private_audio,xtts_campplus_ref_05,audio1_chunk_045.wav,XTTS CAMPPlus target reference,,,,,not_recorded,no,hash not present in the supplied publication package
+private_audio,xtts_campplus_ref_06,audio2_chunk_058.wav,XTTS CAMPPlus target reference,,,,,not_recorded,no,hash not present in the supplied publication package
+private_audio,xtts_campplus_ref_07,audio1_chunk_081.wav,XTTS CAMPPlus target reference,,,,,not_recorded,no,hash not present in the supplied publication package
+private_audio,xtts_campplus_ref_08,audio2_chunk_052.wav,XTTS CAMPPlus target reference,,,,,not_recorded,no,hash not present in the supplied publication package
+private_audio,rvc_training_raw_01,audio1.wav,RVC training raw input,2489.472,48000,2,,78ed159c42348300ca9df440eefa519141abe54a514ff315b33889d3576745b9,no,
+private_audio,rvc_training_raw_02,audio2.wav,RVC training raw input,2408.533,48000,2,,7abc81c1c05e6255889937b61bd0b52370ece29a28ab9a7f77c5d8838f8ee5d1,no,
+private_audio,rvc_training_raw_03,audio3.wav,RVC training raw input,2292.011,48000,2,,c532fa0e4ba138e5a83d488b1ec0f2f86063b05e3ea1e7cb6295a7878b34cf6b,no,
+private_audio,rvc_training_raw_04,audio4.wav,RVC training raw input,2348.715,48000,2,,2e652fbcd61637be2a4950fde2a4f6e966f4cd80e543853e08f8175bfb14fbf5,no,
+private_audio,seedvc_target_reference,seedvc_target_reference.wav,Seed-VC zero-shot target reference embedding source (23.33 s,23.328,48000,1,,613ffef8012e44cd19c813ed2c7af940996fb5199eb00c284357e57b939d86ff,no,
+private_model,rvc_final_model,RVC_Audit8_e800_s52800.pth,RVC final target-speaker model,,,,55231118,4cb6bb0815db5300d89fc8108cdf9f6a3c9f598e6cf818ca608792b916c2878b,no,binary excluded
+private_model,rvc_faiss_index,added_IVF2416_Flat_nprobe_1_RVC_Audit8_v2.index,RVC speaker-specific FAISS index,,,,297759139,a7b0127b180e4a6f3ad10b13414b32a63672cf42f8e873a4fc2cbd0834bfd1de,no,"speaker-specific, NOT distributed"
+upstream_model,seedvc_ar_base,,Seed-VC ar_base checkpoint,,,,,not_recorded,no,download from HF checkpoint snapshot 257283f9f41585055e8f858fba4fd044e5caed6e
+upstream_model,seedvc_cfm_small,,Seed-VC cfm_small checkpoint,,,,,not_recorded,no,download from HF checkpoint snapshot 257283f9f41585055e8f858fba4fd044e5caed6e

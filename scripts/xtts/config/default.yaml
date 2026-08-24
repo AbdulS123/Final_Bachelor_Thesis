@@ -1,0 +1,28 @@
+project_name: tts-studio
+
+backends:
+  xtts:
+    enabled: true
+    model_path: models/xtts
+    device: auto
+
+audio:
+  sample_rate: 24000
+  output_dir: data/audio/outputs
+  reference_dir: data/audio/reference
+  input_dir: data/audio/inputs
+
+language:
+  default_language: de
+  default_locale: de-AT
+  supported_languages:
+    - de
+
+performance:
+  keep_model_loaded: true
+  prefer_gpu: true
+  warmup_on_start: true
+
+logging:
+  level: INFO
+  file: logs/tts.log

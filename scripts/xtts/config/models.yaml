@@ -1,0 +1,12 @@
+selected_backend: xtts
+allow_download: true
+
+backends:
+  xtts:
+    enabled: true
+    model_name: tts_models/multilingual/multi-dataset/xtts_v2
+    huggingface_repo: coqui/XTTS-v2
+    default_language: de
+    reference_audio_dir: data/audio/reference
+    load_once: true
+    warmup_text: "Hallo. Dies ist ein Test."

@@ -1,0 +1,46 @@
+diff --git a/infer/cli.py b/infer/cli.py
+index 190216d..855dc19 100644
+--- a/infer/cli.py
++++ b/infer/cli.py
+@@ -56,7 +56,7 @@ def build_parser():
+     )
+     parser.add_argument("--pitch", type=int, default=0, help="Pitch shift in semitones.")
+     parser.add_argument(
+-        "--f0-method", choices=["pm", "rmvpe"], default="rmvpe"
++        "--f0-method", choices=["pm", "rmvpe", "harvest"], default="rmvpe"
+     )
+     parser.add_argument(
+         "--index",
+diff --git a/infer/vc/pipeline.py b/infer/vc/pipeline.py
+index 2aa3235..5abdfdf 100644
+--- a/infer/vc/pipeline.py
++++ b/infer/vc/pipeline.py
+@@ -68,7 +68,7 @@ class Pipeline(object):
+         f0_up_key,
+         f0_method,
+     ):
+-        if f0_method not in ("pm", "rmvpe", "fcpe"):
++        if f0_method not in ("pm", "rmvpe", "harvest", "fcpe"):
+             raise ValueError(f"Unsupported F0 method: {f0_method}")
+         time_step = self.window / self.sr * 1000
+         f0_min = 50
+@@ -91,6 +91,19 @@ class Pipeline(object):
+                 f0 = np.pad(
+                     f0, [[pad_size, p_len - len(f0) - pad_size]], mode="constant"
+                 )
++        elif f0_method == "harvest":
++            import pyworld
++
++            f0, _ = pyworld.harvest(
++                x.astype(np.float64),
++                self.sr,
++                frame_period=self.window / self.sr * 1000,
++            )
++            pad_size = (p_len - len(f0) + 1) // 2
++            if pad_size > 0 or p_len - len(f0) - pad_size > 0:
++                f0 = np.pad(
++                    f0, [[pad_size, p_len - len(f0) - pad_size]], mode="constant"
++                )
+         elif f0_method == "rmvpe":
+             if not hasattr(self, "model_rmvpe"):
+                 from infer.rmvpe import RMVPE

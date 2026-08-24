@@ -1,0 +1,13 @@
+file,system,scenario,take,wer_vs_intended,cer_vs_intended,delta_wer_vs_source,delta_cer_vs_source,subs_dels_ins,campplus_similarity_to_target,similarity_to_source,delta_similarity_vs_source,processing_time_s,output_duration_s,source_duration_s,rtf,model_loaded,preprocessing_included,primary_failure,secondary_failures
+S1_RVC_take01.wav,RVC_Audit8_fixed,S1,1,0.2727,0.0816,0.1818,0.034,3/2/1,0.8842,0.8217,0.0489,5.76,12.48,12.5,0.4608,True,True,none,
+S1_RVC_take02.wav,RVC_Audit8_fixed,S1,2,0.2273,0.1156,0.0455,0.0476,3/1/1,0.9292,0.8472,0.0405,3.32,7.98,8.0,0.415,True,True,missing linguistic content,inserted linguistic content
+S1_RVC_take03.wav,RVC_Audit8_fixed,S1,3,0.2273,0.0952,0.1818,0.068,3/1/1,0.9466,0.7853,0.0906,3.31,8.48,8.5,0.3894,True,True,inserted linguistic content,
+S2_RVC_take01.wav,RVC_Audit8_fixed,S2,1,0.0909,0.0458,0.0455,0.0229,1/1/0,0.8642,0.7381,0.0222,3.336,8.98,9.0,0.3706,True,True,none,
+S2_RVC_take02.wav,RVC_Audit8_fixed,S2,2,0.1364,0.0534,0.0455,0.0,2/1/0,0.8751,0.7552,0.0851,3.439,9.48,9.5,0.362,True,True,none,
+S2_RVC_take03.wav,RVC_Audit8_fixed,S2,3,0.0455,0.0229,0.0,0.0,0/1/0,0.823,0.686,-0.0009,2.56,8.48,8.5,0.3012,True,True,none,
+S1_SEEDVC_take01.wav,SeedVC_fixed,S1,1,0.3636,0.2245,0.2727,0.1769,6/2/0,0.9099,0.8245,0.0746,47.841,12.109,12.5,3.8273,True,True,missing linguistic content,inserted linguistic content
+S1_SEEDVC_take02.wav,SeedVC_fixed,S1,2,0.4091,0.1973,0.2273,0.1293,8/0/1,0.9046,0.7546,0.0159,39.152,7.93,8.0,4.894,True,True,inserted linguistic content,
+S1_SEEDVC_take03.wav,SeedVC_fixed,S1,3,0.3182,0.1293,0.2727,0.102,5/1/1,0.9159,0.7378,0.0599,37.199,8.231,8.5,4.3763,True,True,missing linguistic content,
+S2_SEEDVC_take01.wav,SeedVC_fixed,S2,1,0.1818,0.084,0.1364,0.0611,3/1/0,0.9261,0.7581,0.0841,40.148,8.916,9.0,4.4609,True,True,missing linguistic content,inserted linguistic content
+S2_SEEDVC_take02.wav,SeedVC_fixed,S2,2,0.1818,0.0992,0.0909,0.0458,2/2/0,0.9374,0.6904,0.1473,42.313,9.729,9.5,4.454,True,True,inserted linguistic content,
+S2_SEEDVC_take03.wav,SeedVC_fixed,S2,3,0.7273,0.4504,0.6818,0.4275,14/1/1,0.9113,0.7858,0.0875,46.32,11.134,8.5,5.4494,True,True,repeated word/phrase,missing linguistic content; inserted linguistic content; abnormal duration

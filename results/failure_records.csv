@@ -1,0 +1,19 @@
+file,system,scenario,take_or_run,failure_status,evidence
+S1_XTTS_run01.wav,XTTS-v2,S1,1,none,none
+S1_XTTS_run02.wav,XTTS-v2,S1,2,abnormal_generation_time | missing_linguistic_content | truncation,ASR transcript missing second sentence (deletions>10% of words) | RTF>1.0 | duration ~half of sibling runs
+S1_XTTS_run03.wav,XTTS-v2,S1,3,none,none
+S2_XTTS_run01.wav,XTTS-v2,S2,1,none,none
+S2_XTTS_run02.wav,XTTS-v2,S2,2,none,none
+S2_XTTS_run03.wav,XTTS-v2,S2,3,none,none
+S1_RVC_take01.wav,RVC v2,S1,1,none,
+S2_RVC_take01.wav,RVC v2,S2,1,none,
+S1_SEEDVC_take01.wav,Seed-VC,S1,1,missing linguistic content | inserted linguistic content,3 source tokens absent: bin zwei terminen; 3 output tokens absent from source: habe einen kriech
+S2_SEEDVC_take01.wav,Seed-VC,S2,1,missing linguistic content | inserted linguistic content,3 source tokens absent: stehe mit gestoppten; 2 output tokens absent from source: sehe gestorbenen
+S1_RVC_take02.wav,RVC v2,S1,2,missing linguistic content | inserted linguistic content,3 source tokens absent: zeitterminen zahlung bestellung; 3 output tokens absent from source: der zalm bestaetigung
+S2_RVC_take02.wav,RVC v2,S2,2,none,
+S1_SEEDVC_take02.wav,Seed-VC,S1,2,inserted linguistic content,4 output tokens absent from source: der hermin bestehung der
+S2_SEEDVC_take02.wav,Seed-VC,S2,2,inserted linguistic content,2 output tokens absent from source: gelater gestorben
+S1_RVC_take03.wav,RVC v2,S1,3,inserted linguistic content,2 output tokens absent from source: zeittermin greife
+S2_RVC_take03.wav,RVC v2,S2,3,none,
+S1_SEEDVC_take03.wav,Seed-VC,S1,3,missing linguistic content,3 source tokens absent: bin zwei terminen
+S2_SEEDVC_take03.wav,Seed-VC,S2,3,repeated word/phrase | missing linguistic content | inserted linguistic content | abnormal duration,repeated phrase: 'eier boots und'; 9 source tokens absent: stehe gerade in apotheke bestaetigung app funktioniert bitte; 7 output tokens absent from source: bestaetigen eier boots hitten eier boots hitten; duration ratio 1.31

@@ -1,0 +1,65 @@
+FINAL XTTS CONFIGURATION (extracted from implementation for reproducibility)
+============================================================================
+
+TTS software
+  Package            : Coqui TTS 0.22.0
+  Model              : tts_models/multilingual/multi-dataset/xtts_v2
+  HF repo            : coqui/XTTS-v2
+  Variant            : XTTS-v2, zero-shot multilingual
+
+Language
+  default_language   : de (German)
+  default_locale     : de-AT (Austrian German treated as code 'de')
+
+Target speaker (reference)
+  Reference ID       : target_reference_01   [INTENTIONALLY EXCLUDED; see
+                        evaluation/private_material_manifest.csv]
+  Duration           : 22.805 s
+  Sample rate        : 24000 Hz
+  Channels           : 1 (mono)
+  Conditioning       : cached gpt_cond_latent + speaker_embedding
+                        (private cached conditioning derived from target_reference_01)
+
+Synthesis parameters (fixed; backend defaults)
+  temperature        = 0.75
+  top_k              = 62
+  top_p              = 0.86
+  repetition_penalty = 1.09
+  length_penalty     = 1.05
+  enable_text_splitting : True
+  emotion            : neutral (default config, no audio post-modification)
+  speed / pitch / volume : 1.0 / 0.0 / 1.0
+
+Post-processing (emotion.py/audio.py)
+  trim trailing silence (threshold 0.02, pad 0.1 s)
+  peak normalize to 0.8 (-2 dB)
+  output             : 24 kHz mono, 16-bit PCM WAV
+
+Text normalization
+  module : scripts/xtts/tts/text_norm_de.py : normalize_german()
+  Both final scenario texts are unchanged by the normalizer (no matching rule).
+
+Stability guard / automatic retry (unchanged engine behavior)
+  duration anomaly if seconds > max( 3 * (len(text)/13.0 + 1.5), 8.0 )
+    Scenario S1 (executive) threshold ~38.65 s ; Scenario 2 (customer) ~34.96 s
+  static-noise detection via scripts/xtts/tts/audio.py:detect_static_noise()
+  up to 3 attempts; duration retries raise temperature (max 1.05) and
+  repetition_penalty (>= 1.2); other retries use safe defaults.
+
+Evaluation configuration
+  ASR WER/CER : faster-whisper mobiuslabsgmbh/faster-whisper-large-v3-turbo
+                beam_size=5, temperature=0, language=de, no VAD, no prior context
+  Speaker similarity : FunASR CAMPPlus campplus_cn_common.bin (192-dim, 16 kHz)
+  Timing : wall clock of full synthesize() call; RTF = gen_time / audio_duration
+
+Software / hardware environment
+  Windows host
+  GPU        : NVIDIA RTX A5000 Laptop GPU (CUDA 12.1), device cuda
+  Torch      : 2.5.1+cu121
+  Python     : 3.11
+  faster-whisper : 1.2.1
+  jiwer      : installed (no __version__ attribute)
+  funasr     : 1.4.2 (CAMPPlus class)
+  soundfile  : 0.13.1
+  librosa    : 0.11.0
+  num2words  : installed
